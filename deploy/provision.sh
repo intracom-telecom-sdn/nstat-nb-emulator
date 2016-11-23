@@ -60,7 +60,7 @@ virtualenv --system-site-packages $BASE_DIR/$VENV_DIR_NSTAT
 
 wget https://raw.githubusercontent.com/intracom-telecom-sdn/nstat-nb-generator/nstat-remote-nb/deploy/requirements.txt -P $BASE_DIR
 source $BASE_DIR/$VENV_DIR_NSTAT/bin/activate
-pip3 $pip_options install -r $BASE_DIR/requirements_nb_generator.txt
+pip3 $pip_options install -r $BASE_DIR/requirements.txt
 rm -rf $BASE_DIR/requirements.txt
 deactivate
 
