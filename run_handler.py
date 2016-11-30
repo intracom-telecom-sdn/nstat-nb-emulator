@@ -35,13 +35,7 @@ def northbound_generator():
     nstat orchestrator)
     """
 
-    venv = 'source /opt/venv_nstat/bin/activate'
-    if os.path.isfile(venv) is False:
-        venv = ''
-    else:
-        venv+=';'
-
-    cmd = ('{0} python3.4 nb_gen.py --controller-ip=\'{1}\' '
+    cmd = ('python3.4 nb_gen.py --controller-ip=\'{1}\' '
            '--controller-port=\'{2}\' '
            '--number-of-flows=\'{3}\' '
            '--number-of-workers=\'{4}\' '
@@ -53,7 +47,7 @@ def northbound_generator():
 
     if sys.argv[6] == 'True':
         cmd += ' --delete-flows'
-    cmd = cmd.format(venv, sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
+    cmd = cmd.format(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
                      sys.argv[5], sys.argv[7], sys.argv[8],
                      sys.argv[9], sys.argv[10])
     p = subprocess.Popen(cmd, shell=True,
