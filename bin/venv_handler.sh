@@ -12,7 +12,7 @@
 # 1. PYTHONPATH
 # 2. Handler path
 
-if [ "$#" -eq 3 ]
+if [ "$#" -eq 2 ]
 then
     source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1 python3.4 $2
 else
