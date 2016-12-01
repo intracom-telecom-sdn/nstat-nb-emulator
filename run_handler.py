@@ -35,15 +35,15 @@ def northbound_generator():
     nstat orchestrator)
     """
 
-    cmd = ('python3.4 nb_gen.py --controller-ip=\'{1}\' '
-           '--controller-port=\'{2}\' '
-           '--number-of-flows=\'{3}\' '
-           '--number-of-workers=\'{4}\' '
-           '--operation-delay=\'{5}\' '
-           '--restconf-user=\'{6}\' '
-           '--restconf-password=\'{7}\' '
-           '--fpr={8} '
-           '--logging-level=\'{9}\'')
+    cmd = ('python3.4 nb_gen.py --controller-ip=\'{0}\' '
+           '--controller-port=\'{1}\' '
+           '--number-of-flows=\'{2}\' '
+           '--number-of-workers=\'{3}\' '
+           '--operation-delay=\'{4}\' '
+           '--restconf-user=\'{5}\' '
+           '--restconf-password=\'{6}\' '
+           '--fpr={7} '
+           '--logging-level=\'{8}\'')
 
     if sys.argv[6] == 'True':
         cmd += ' --delete-flows'
