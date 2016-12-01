@@ -20,12 +20,12 @@
 # 09. --restconf-user
 # 10. --restconf-password
 # 11. --fpr
-# 11. --logging-level
+# 12. --logging-level
 
 if [ "$#" -eq 2 ]
 then
     echo 'Konstantinos Papadopoulos'
-    source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1; python3.4 $2 $3 $4 $5 $6 $7 $8 $9 $10 #11
+    source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1; python3.4 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12
 else
     echo "Invalid number of arguments."
     exit 1
