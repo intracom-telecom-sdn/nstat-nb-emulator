@@ -14,6 +14,7 @@
 
 if [ "$#" -eq 2 ]
 then
+    echo 'Konstantinos Papadopoulos'
     source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1 python3.4 $2
 else
     echo "Invalid number of arguments."
