@@ -23,10 +23,10 @@
 # 12. --logging-level
 
 if [ "$#" -eq 12 ]
-then:
+then
     source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1; python3.4 $2 $3 $4 $5 $6 $7 $8 $9 ${10} ${11} ${12}
 
-else:
+else
     echo "Invalid number of arguments."
     exit 1
 fi
