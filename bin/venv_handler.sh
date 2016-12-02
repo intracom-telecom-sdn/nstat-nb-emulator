@@ -10,7 +10,12 @@
 # handlers.
 # Arguments:
 # 01. PYTHONPATH
-# 02. run_handler.py path
+
+
+
+if [ $2="/opt/nstat/emulators/nb_generator/run_handler.py"]; then
+# ------------------------------------------------------------------------------
+# 02. run_handler.py
 # 03. --controller-ip
 # 04. --controller-port
 # 05. --number-of-flows
@@ -21,12 +26,27 @@
 # 10. --restconf-password
 # 11. --fpr
 # 12. --logging-level
-
-if [ "$#" -eq 12 ]
-then
-    source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1; python3.4 $2 $3 $4 $5 $6 $7 $8 $9 ${10} ${11} ${12}
-    exit 0
-else
-    echo "Invalid number of arguments."
-    exit 1
+# ------------------------------------------------------------------------------
+		if [ "$#" -eq 12 ];	then
+	    source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1; python3.4 $2 $3 $4 $5 $6 $7 $8 $9 ${10} ${11} ${12}
+	    exit 0
+	else
+	    echo "Invalid number of arguments."
+	    exit 1
+	fi
+elif [ $2="/opt/nstat/emulators/nb_generator/bin/handlers/get_oper_ds_flows.py"]; then
+# ------------------------------------------------------------------------------
+# 02. get_oper_ds_flows.py
+# 03. --controller-ip
+# 04. --controller-port
+# 05. --restconf-user
+# 06. --restconf-password
+# ------------------------------------------------------------------------------
+	if [ "$#" -eq 6 ]; then
+	    source /opt/venv_nb_generator/bin/activate; PYTHONPATH=$1; python3.4 $2 $3 $4 $5 $6
+	    exit 0
+	else
+	    echo "Invalid number of arguments."
+	    exit 1
+	fi
 fi
