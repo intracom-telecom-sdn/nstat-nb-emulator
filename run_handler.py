@@ -65,6 +65,6 @@ def northbound_generator():
     # " to extract the results
     result = [float(x) for x in regex_result.group()[21:].strip().split('/')]
     print(json.dumps(result))
-
+    sys.exit(0)
 if __name__ == '__main__':
     northbound_generator()
