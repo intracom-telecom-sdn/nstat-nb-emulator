@@ -28,11 +28,10 @@ def get_oper_ds_flows_main():
                                                            'operational',
                                                            (self.controller.restconf_user,
                                                            self.controller.restconf_pass))
-        odl_inventory.get_inventory_flows_stats()
-        logging.debug('Found {0} flows at inventory'.
-                      format(odl_inventory.found_flows))
-        return odl_inventory.found_flows
-
+    odl_inventory.get_inventory_flows_stats()
+    logging.debug('Found {0} flows at inventory'.
+                  format(odl_inventory.found_flows))
+    print(odl_inventory.found_flows)
 
 if __name__ == '__main__':
     get_oper_ds_flows_main()
