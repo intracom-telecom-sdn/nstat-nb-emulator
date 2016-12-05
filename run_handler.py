@@ -10,7 +10,6 @@
 Run handler of NorthBound traffic generator
 """
 import json
-import logging
 import os
 import re
 import subprocess
@@ -65,7 +64,6 @@ def northbound_generator():
     # 21: is the string offset from expression "Total_failed_flows =
     # " to extract the results
     result = [float(x) for x in regex_result.group()[21:].strip().split('/')]
-    logging.info('[nb-gen run handler] cmd result: {0}]'.format(result))
     jresult = json.dumps(result)
     print(jresult)
     sys.exit(0)
