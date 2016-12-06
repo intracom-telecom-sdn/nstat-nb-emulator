@@ -34,9 +34,12 @@ def northbound_generator():
     10. logging_level: nb generator logging level (is passed from
     nstat orchestrator)
     """
+#            'python3.4 /opt/nstat/emulators/nb_generator/nb_gen.py '
 
     cmd = ('source /opt/venv_nb_generator/bin/activate; '
-           'python3.4 /opt/nstat/emulators/nb_generator/nb_gen.py '
+           'pwd')
+
+    '''
            '--controller-ip=\'{0}\' '
            '--controller-port=\'{1}\' '
            '--number-of-flows=\'{2}\' '
@@ -52,6 +55,7 @@ def northbound_generator():
     cmd = cmd.format(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
                      sys.argv[5], sys.argv[7], sys.argv[8],
                      sys.argv[9], sys.argv[10])
+    '''
     p = subprocess.Popen(cmd, shell=True,
                          stdin=subprocess.PIPE,
                          stdout=subprocess.PIPE,
@@ -59,6 +63,7 @@ def northbound_generator():
                          close_fds=True)
 
     cmd_output = p.stdout.read().decode(sys.stdout.encoding)
+    print(cmd_output)
     cmd_output = cmd_output.strip()
     regex_result = re.search(r"Total_failed_flows = [0-9].*", cmd_output)
     if regex_result is None:
