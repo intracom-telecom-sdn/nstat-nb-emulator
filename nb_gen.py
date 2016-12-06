@@ -47,7 +47,7 @@ FLOW_BODY_TEMPLATE = \
                             "order": 0
                         }
                     ]
-                }               
+                }
             }"""
 
 
@@ -114,11 +114,11 @@ def flow_master(args):
         try:
             failed_flow_ops_del = \
                 nb_gen_utils.flows_transmission_run(flow_ops_params_set, op_delay_ms,
-                                                node_names, delete_url_template, 
+                                                node_names, delete_url_template,
                                                 flow_template,
                                                 controller_rest_auth_token, fpr,
                                                 delete_flows_flag=True)
-            
+
         except:
             failed_flow_ops_del = flow_ops_params_set.nflows
 
@@ -127,7 +127,7 @@ def flow_master(args):
 
     output_msg = 'Total_failed_flows = {0}'.format(failed_flow_ops_total)
 
-    return output_msg
+    return output_msg.strip(' \t\n\r')
 
 if __name__ == '__main__':
 
