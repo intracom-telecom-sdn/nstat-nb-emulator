@@ -34,11 +34,9 @@ def northbound_generator():
     10. logging_level: nb generator logging level (is passed from
     nstat orchestrator)
     """
-    tmp = 'python3.4 '+'{0}'+'nb_gen.py'
-    print(tmp)
 
     cmd = ('source /opt/venv_nb_generator/bin/activate; '
-           'python3.4 '+'{0}'+'nb_gen.py'
+           'python3.4 {0}nb_gen.py '
            '--controller-ip=\'{1}\' '
            '--controller-port=\'{2}\' '
            '--number-of-flows=\'{3}\' '
