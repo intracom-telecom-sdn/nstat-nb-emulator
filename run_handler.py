@@ -35,7 +35,9 @@ def northbound_generator():
     nstat orchestrator)
     """
 
-    cmd = ('source /opt/venv_nb_generator/bin/activate; python3.4 nb_gen.py --controller-ip=\'{0}\' '
+    cmd = ('source /opt/venv_nb_generator/bin/activate; '
+           'python3.4 /opt/nstat/emulators/nb_generator/nb_gen.py '
+           '--controller-ip=\'{0}\' '
            '--controller-port=\'{1}\' '
            '--number-of-flows=\'{2}\' '
            '--number-of-workers=\'{3}\' '
@@ -58,7 +60,6 @@ def northbound_generator():
 
     cmd_output = p.stdout.read().decode(sys.stdout.encoding)
     cmd_output = cmd_output.strip()
-    print(cmd_output)
     regex_result = re.search(r"Total_failed_flows = [0-9].*", cmd_output)
     if regex_result is None:
         sys.exit(1)
