@@ -35,8 +35,10 @@ def northbound_generator():
     nstat orchestrator)
     """
 
+# python3.4 {0}nb_gen.py
+
     cmd = ('source /opt/venv_nb_generator/bin/activate; '
-           'python3.4 {0}nb_gen.py '
+           'python3.4 /opt/nstat/emulators/nb_generator/nb_gen.py '
            '--controller-ip=\'{1}\' '
            '--controller-port=\'{2}\' '
            '--number-of-flows=\'{3}\' '
@@ -46,7 +48,7 @@ def northbound_generator():
            '--restconf-password=\'{7}\' '
            '--fpr={8} '
            '--logging-level=\'{9}\'')
-    print(cmd)
+
     if sys.argv[7] == 'True':
         cmd += ' --delete-flows'
     cmd = cmd.format(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
