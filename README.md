@@ -17,7 +17,13 @@ to the Config DataStore via the NorthBound interface.
   the NorthBound generator in NSTAT, we have developed and use a handler
   (`<NSTAT_src>/emulators/nb_generator/run_handler.py`).
 
+## Nodes deployment
+...
+
+### Virtual environment
+
 ## Usage
+
 
 For generating traffic to the controller's Config DataStore via the
 NorthBound interface, follow these steps:
