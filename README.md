@@ -39,13 +39,13 @@ necessary NSTAT nb-generator dependencies. In this case the Dockerfile
 1.  builds an ubuntu:14.04 image
 2.  downloads the ```deploy/provision.sh``` script when building the docker image
 3.  executes the provision.sh within the docker image
-3.1  the provision.sh has the ability to either install all NSTAT-nb-generator
+    3.1    the provision.sh has the ability to either install all NSTAT-nb-generator
 dependencies directly on the image or
-3.2 create a Python virtual environment and installing there, all NSTAT-nb-generator
+    3.2    create a Python virtual environment and installing there, all NSTAT-nb-generator
  dependencies keeping in the way the ubuntu:14.04 image clean.
 
 
-### Virtual environment
+### Python Virtual Environment
 
 ## Usage
 
