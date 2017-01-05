@@ -17,7 +17,38 @@ to the Config DataStore via the NorthBound interface.
   the NorthBound generator in NSTAT, we have developed and use a handler
   (`<NSTAT_src>/emulators/nb_generator/run_handler.py`).
 
+## Nodes deployment
+
+For using the NSTAT northbound generator, three nodes are necessary as mentioned
+in Fig.... in NSTAT architecture.
+
+*    the NSTAT northbound generator node,
+*    the SDN controller node,
+*    the SouthBound emulator node.
+
+Since the NSTAT northbound generator is an external application used by NSTAT
+and written in Python, a Dockerfile is provided under
+
+```bash
+<NSTAT-NB-GENERATOR_src>/deploy/docker/no_proxy
+```
+
+providing the ability to build a docker container image with all
+necessary NSTAT nb-generator dependencies. In this case the Dockerfile
+
+1.  builds an ubuntu:14.04 image
+2.  downloads the ```deploy/provision.sh``` script when building the docker image
+3.  executes the provision.sh within the docker image
+    3.1    the provision.sh has the ability to either install all NSTAT-nb-generator
+dependencies directly on the image or
+    3.2    create a Python virtual environment and installing there, all NSTAT-nb-generator
+ dependencies keeping in the way the ubuntu:14.04 image clean.
+
+
+### Python Virtual Environment
+
 ## Usage
+
 
 For generating traffic to the controller's Config DataStore via the
 NorthBound interface, follow these steps:
