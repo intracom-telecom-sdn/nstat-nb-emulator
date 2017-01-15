@@ -16,11 +16,8 @@ before_script:
   - source /opt/venv_nb_generator/bin/activate
   - export PYTHONPATH=$(pwd)
 script:
-  - echo "Running Unittests"
-  - coverage erase
-  - coverage combine
+  - echo "Unittests not yet implemented"
 after_success:
-  coveralls
   deactivate
 notifications:
   email: false
