@@ -6,9 +6,12 @@ languages:
 engines:
  radon:
   enabled: true
+ shellcheck:
+   enabled: true
 ratings:
   paths:
     - "**.py"
+    - "**.sh"
 exclude_paths:
 - "deploy/*"
 - "images/*"
