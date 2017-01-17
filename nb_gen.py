@@ -240,5 +240,3 @@ if __name__ == '__main__':
     os.chdir(abs_dir_path)
 
     result = flow_master(args)
-
-    print(result)

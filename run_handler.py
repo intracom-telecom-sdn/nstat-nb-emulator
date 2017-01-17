@@ -18,21 +18,20 @@ import sys
 
 def northbound_generator():
     """
-    Command line arguments:
-
-    1.  ctrl_ip: controller IP
-    2.  ctrl_port: controller RESTconf port
-    3.  nflows: total number of flows to distribute
-    4.  nworkers: number of worker threads to create
-    5.  op_delay_ms: delay between thread operations (in milliseconds)
-    6.  delete_flows_flag: whether to delete or not the added flows as part of
-    the test
-    7. controller_restconf_user: controller NorthBound RESTconf username
-    8. controller_restconf_password: controller NorthBound RESTconf password
-    9. flows-per-request, the number of flows that will be sent in a single
-    request
-    10. logging_level: nb generator logging level (is passed from
-    nstat orchestrator)
+    Command line arguments: \
+        1.  ctrl_ip: controller IP
+        2.  ctrl_port: controller RESTconf port
+        3.  nflows: total number of flows to distribute
+        4.  nworkers: number of worker threads to create
+        5.  op_delay_ms: delay between thread operations (in milliseconds)
+        6.  delete_flows_flag: whether to delete or not the added flows as part of
+        the test
+        7. controller_restconf_user: controller NorthBound RESTconf username
+        8. controller_restconf_password: controller NorthBound RESTconf password
+        9. flows-per-request, the number of flows that will be sent in a single
+        request
+        10. logging_level: nb generator logging level (is passed from
+        nstat orchestrator)
     """
 
     cmd = ('source /opt/venv_nb_generator/bin/activate; '
