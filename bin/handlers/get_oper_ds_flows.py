@@ -9,8 +9,7 @@ import sys
 
 def get_oper_flows(self):
     """Query number of flows registered in ODL operational DS
-    :returns: number of flows found, 0 if none exists and -1 in case of
-    error.
+    :returns: number of flows found, 0 if none exists and -1 in case of error.
     :rtype: int
     """
     ip = sys.argv[1]
