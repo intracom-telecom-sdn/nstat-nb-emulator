@@ -20,5 +20,4 @@ ratings:
     - "**.py"
     - "**.sh"
 exclude_paths:
-- "deploy/*"
 - "images/*"
