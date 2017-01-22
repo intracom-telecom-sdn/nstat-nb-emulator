@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'NSTAT: Network Stress Test Automation Toolkit'
+project = u'NSTAT: NorthBound Generator'
 copyright = u'2017, Intracom S.A. Telecom Solutions'
 author = u'Intracom S.A. Telecom Solutions'
 
