@@ -20,6 +20,7 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath('../bin/handlers/'))
+sys.path.append(os.path.abspath('../src/'))
 sys.path.append(os.path.abspath('..'))
 
 # -- General configuration ------------------------------------------------
@@ -51,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'NSTAT: Network Stress Test Automation Toolkit'
+project = u'NSTAT: NorthBound Generator'
 copyright = u'2017, Intracom S.A. Telecom Solutions'
 author = u'Intracom S.A. Telecom Solutions'
 

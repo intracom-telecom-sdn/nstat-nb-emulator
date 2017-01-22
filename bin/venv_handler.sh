@@ -13,7 +13,7 @@
 
 HANDLER_PATH=$2;
 
-if [ "$HANDLER_PATH" == "/opt/nstat/emulators/nb_generator/run_handler.py" ]; then
+if [ "$HANDLER_PATH" == "/opt/nstat/emulators/nb_generator/src/run_handler.py" ]; then
 # ------------------------------------------------------------------------------
 # 02. run_handler.py
 # 03. --controller-ip
