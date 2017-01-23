@@ -64,20 +64,11 @@ pip3 $pip_options install -r $BASE_DIR/requirements.txt
 rm -rf $BASE_DIR/requirements.txt
 deactivate
 
-# NSTAT installation
+# NSTAT-NB-GENERATION installation
 #------------------------------------------------------------------------------
 git clone https://github.com/intracom-telecom-sdn/nstat-nb-generator.git $BASE_DIR/nstat-nb-generator
-git --git-dir=$BASE_DIR/nstat/.git --work-tree=$BASE_DIR/nstat checkout v1.3
+git --git-dir=$BASE_DIR/nstat/.git --work-tree=$BASE_DIR/nstat checkout master
 apt-get clean
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
-# add git clone for NB Generator
-
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
 
 # This step is required to run jobs with any user
 #------------------------------------------------------------------------------
