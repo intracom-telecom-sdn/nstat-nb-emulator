@@ -3,6 +3,8 @@
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg?maxAge=2592000)](https://hub.docker.com/r/intracom/nstat-nb-generator/)
 [![Documentation Status](https://readthedocs.org/projects/nstat-northbound-generator/badge/?version=latest)](http://nstat-northbound-generator.readthedocs.io/en/latest/?badge=latest)
 [![Issue Count](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator/badges/issue_count.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator)
+[![Code Health](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-generator/master/landscape.svg?style=flat)](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-generator/master)
+
 
 # NSTAT Northbound Generator
 
