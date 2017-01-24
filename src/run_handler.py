@@ -56,7 +56,7 @@ def northbound_generator():
                          stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT,
                          close_fds=True)
-    print(cmd)
+
     cmd_output = p.stdout.read().decode(sys.stdout.encoding)
     cmd_output = cmd_output.strip()
     regex_result = re.search(r"Total_failed_flows = [0-9].*", cmd_output)
