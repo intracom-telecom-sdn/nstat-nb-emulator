@@ -1,16 +1,7 @@
 ---
 engines:
-  fixme:
-    enabled: true
-ratings:
-  paths: []
-exclude_paths: []
-languages:
-  Ruby: true
-  JavaScript: false
-  Python: true
-  PHP: false
-engines:
+ fixme:
+  enabled: true
  radon:
   enabled: true
  shellcheck:
@@ -20,4 +11,4 @@ ratings:
     - "**.py"
     - "**.sh"
 exclude_paths:
-- "images/*"
+- images/
