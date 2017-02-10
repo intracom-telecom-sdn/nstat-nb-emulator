@@ -4,7 +4,7 @@
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg?maxAge=2592000)](https://hub.docker.com/r/intracom/nstat-nb-generator/)
 [![Issue Count](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator/badges/issue_count.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator)
 [![Code Health](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-generator/master/landscape.svg?style=flat)](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-generator/master)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b1318125f6e148e4be8deb9d666c185d)](https://www.codacy.com/app/kostis-g-papadopoulos/nstat-nb-generator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=intracom-telecom-sdn/nstat-nb-generator&amp;utm_campaign=Badge_Grade)
 
 # NSTAT Northbound Generator
 
@@ -36,7 +36,7 @@ Before using one of these two methods the following steps must be done
   sudo service docker restart
   ```
 
-### Download the prebuild environment
+### Download the prebuilt environment
 
 docker pull `intracom/nstat-nb-gnerator`
 
