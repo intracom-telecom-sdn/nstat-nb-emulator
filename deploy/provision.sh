@@ -67,11 +67,9 @@ deactivate
 # NSTAT-NB-GENERATION installation
 #------------------------------------------------------------------------------
 git clone https://github.com/intracom-telecom-sdn/nstat-nb-generator.git $BASE_DIR/nstat-nb-generator
-git --git-dir=$BASE_DIR/nstat/.git --work-tree=$BASE_DIR/nstat checkout master
+git --git-dir=nstat-nb-generator/.git --work-tree=nstat-nb-generator checkout v.1.0
 apt-get clean
 
 # This step is required to run jobs with any user
 #------------------------------------------------------------------------------
 chmod 777 -R $BASE_DIR
-
-
