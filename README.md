@@ -19,7 +19,7 @@ options
 
 - download the prebuilt environment from DockerHub
 - build your own container locally using the provided `Dockerfiles` for proxy
-  and no-proxy environments, under the path `<project_path>/deploy/docker`
+  and no-proxy environments, under the path `<PROJECT_DIR>/deploy/docker`
 
 Before using one of these two methods the following steps must be done
 - Install docker (v.1.12.1 or later) should be installed on your
@@ -51,7 +51,8 @@ password: root123
 then make a git clone of the nstat-nb-generator repository within the container
 
 ```bash
-git clone -b master [https://github.com/intracom-telecom-sdn/nstat-nb-generator.git](https://github.com/intracom-telecom-sdn/nstat-nb-generator.git)
+git clone https://github.com/intracom-telecom-sdn/nstat-nb-generator.git
+git --git-dir=nstat-nb-generator/.git --work-tree=nstat-nb-generator checkout v.1.0
 ```
 
 activate the python virtual environment using the command
@@ -60,16 +61,16 @@ activate the python virtual environment using the command
 source /opt/venv_nb_generator/bin/activate
 ```
 
-and start testing using the handlers under `<project_path>/src` directory or
+and start testing using the handlers under `<PROJECT_DIR>/src` directory or
 directly run the generator. You can find directions in the following two
 sections `NorthBound generator handling logic` and `Northbound Generator usage`
 
 ### Build your own container based environment
 
 In order to build your own container locally, you can use the `Dockerfiles`
-provided under the folder `<project_path>/deploy/docker` either for proxy or
+provided under the folder `<PROJECT_DIR>/deploy/docker` either for proxy or
 non-proxy environments. If for instance you choose to build a non-proxy
-container, go to the path `<project_path>/deploy/docker/no_proxy` and run the
+container, go to the path `<PROJECT_DIR>/deploy/docker/no_proxy` and run the
 command
 
 ```bash
@@ -82,7 +83,7 @@ described in the previous section.
 ## NorthBound generator handling logic
 
 The NorthBound generator can be used by NSTAT through a handler. We have only
-one handler `run_handler.py` under the path `<project_path>/src`.
+one handler `run_handler.py` under the path `<PROJECT_DIR>/src`.
 It takes the following command line arguments:
   1. IP address of controller
   2. controller REST interface port (port on which the NorthBound
@@ -118,10 +119,10 @@ following two steps
 
 In case of NSTAT, to avoid a tight coupling between the core application and the
 NorthBound Generator docker container, we make the activation of python virtual
-environment using a wrapper, that resides in the `<project_path>/bin` folder.
+environment using a wrapper, that resides in the `<PROJECT_DIR>/bin` folder.
 If we would like to use this wrapper instead of activating the python virtual
 environment, we could use the following example command in the docker
-container, from the `<project_path>/bin`
+container, from the `<PROJECT_DIR>/bin`
 ```bash
 ./venv_handler.sh run_handler.py 10.0.1.11 8181 100000 5 0 False admin admin 1 DEBUG
 ```
@@ -207,21 +208,21 @@ The flow generator script returns the following values:
   response status code were not 200 or 204
 
 The file `nb_gen.py` can be found under the
-[<project_path>/src](https://github.com/intracom-telecom-sdn/nstat-nb-generator/tree/master/src)
+[<PROJECT_DIR>/src](https://github.com/intracom-telecom-sdn/nstat-nb-generator/tree/master/src)
 folder. In order to run, it requires certain python3.4 libraries, defined in
 file
-[<project_path>/deploy/requirements.txt](https://github.com/intracom-telecom-sdn/nstat-nb-generator/blob/master/deploy/requirements.txt).
+[<PROJECT_DIR>/deploy/requirements.txt](https://github.com/intracom-telecom-sdn/nstat-nb-generator/blob/master/deploy/requirements.txt).
 If the above libraries are installed on the system, as well as python3.4
 
 ```bash
 apt-get update && apt-get install python3.4 python3-pip
-pip3 install -r <project_path>/deploy/requirements.txt
+pip3 install -r <PROJECT_DIR>/deploy/requirements.txt
 ```
 
 then NorthBound generator can run directly with the following example command
 
 ```bash
-python3.4 <project_path>/src/nb_gen.py --controller-ip=10.0.1.11 --controller-port=8181 --number-of-flows=100 --number-of-workers=5 --operation-delay=0 --restconf-user=admin --restconf-password=admin
+python3.4 <PROJECT_DIR>/src/nb_gen.py --controller-ip=10.0.1.11 --controller-port=8181 --number-of-flows=100 --number-of-workers=5 --operation-delay=0 --restconf-user=admin --restconf-password=admin
 ```
 
 In case you use the provided docker container and you have activated the python
