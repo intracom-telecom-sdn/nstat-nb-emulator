@@ -1,19 +1,19 @@
-[![Code Climate](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator/badges/gpa.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator)
-[![Documentation Status](https://readthedocs.org/projects/nstat-northbound-generator/badge/?version=latest)](http://nstat-northbound-generator.readthedocs.io/en/latest/?badge=latest)
-[![Build Status](https://travis-ci.org/intracom-telecom-sdn/nstat-nb-generator.svg?branch=master)](https://travis-ci.org/intracom-telecom-sdn/nstat-nb-generator)
-[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg?maxAge=2592000)](https://hub.docker.com/r/intracom/nstat-nb-generator/)
-[![Issue Count](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator/badges/issue_count.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-generator)
-[![Code Health](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-generator/master/landscape.svg?style=flat)](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-generator/master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b1318125f6e148e4be8deb9d666c185d)](https://www.codacy.com/app/kostis-g-papadopoulos/nstat-nb-generator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=intracom-telecom-sdn/nstat-nb-generator&amp;utm_campaign=Badge_Grade)
+[![Code Climate](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator/badges/gpa.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator)
+[![Documentation Status](https://readthedocs.org/projects/nstat-northbound-emulator/badge/?version=latest)](http://nstat-northbound-emulator.readthedocs.io/en/latest/?badge=latest)
+[![Build Status](https://travis-ci.org/intracom-telecom-sdn/nstat-nb-emulator.svg?branch=master)](https://travis-ci.org/intracom-telecom-sdn/nstat-nb-emulator)
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg?maxAge=2592000)](https://hub.docker.com/r/intracom/nstat-nb-emulator/)
+[![Issue Count](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator/badges/issue_count.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator)
+[![Code Health](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-emulator/master/landscape.svg?style=flat)](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-emulator/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b1318125f6e148e4be8deb9d666c185d)](https://www.codacy.com/app/kostis-g-papadopoulos/nstat-nb-emulator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=intracom-telecom-sdn/nstat-nb-emulator&amp;utm_campaign=Badge_Grade)
 
-# NSTAT Northbound Generator
+# NSTAT Northbound Emulator
 
 ## Motivation
 
 To provide a controllable and configurable method for generating and adding flows
 to the Config DataStore via the NorthBound interface.
 
-## Northbound Generator node deployment
+## Northbound Emulator node deployment
 
 In order to distribute this application as an appliance ready to be used, we
 use [docker containers](https://www.docker.com/what-docker). There are two
@@ -50,11 +50,11 @@ docker run -it intracom/nstat-nb-gnerator /bin/bash
 password: root123
 ```
 
-then make a git clone of the nstat-nb-generator repository within the container
+then make a git clone of the nstat-nb-emulator repository within the container
 
 ```bash
-git clone https://github.com/intracom-telecom-sdn/nstat-nb-generator.git
-git --git-dir=nstat-nb-generator/.git --work-tree=nstat-nb-generator checkout v.1.0
+git clone https://github.com/intracom-telecom-sdn/nstat-nb-emulator.git
+git --git-dir=nstat-nb-emulator/.git --work-tree=nstat-nb-emulator checkout v.1.0
 ```
 
 activate the python virtual environment using the command
@@ -210,10 +210,10 @@ The flow generator script returns the following values:
   response status code were not 200 or 204
 
 The file `nb_gen.py` can be found under the
-[<PROJECT_DIR>/src](https://github.com/intracom-telecom-sdn/nstat-nb-generator/tree/master/src)
+[<PROJECT_DIR>/src](https://github.com/intracom-telecom-sdn/nstat-nb-emulator/tree/master/src)
 folder. In order to run, it requires certain python3.4 libraries, defined in
 file
-[<PROJECT_DIR>/deploy/requirements.txt](https://github.com/intracom-telecom-sdn/nstat-nb-generator/blob/master/deploy/requirements.txt).
+[<PROJECT_DIR>/deploy/requirements.txt](https://github.com/intracom-telecom-sdn/nstat-nb-emulator/blob/master/deploy/requirements.txt).
 If the above libraries are installed on the system, as well as python3.4
 
 ```bash
@@ -334,4 +334,4 @@ depicted in the following figure. In this case depicted, we have four workers,
 8 switches and n number of flows, which should be greater than the number of
 switches or else some switches will remain without flows.
 
-![Example of flow distribution and operation](https://github.com/intracom-telecom-sdn/nstat-nb-generator/blob/master/images/nb_flow_gen.png)
+![Example of flow distribution and operation](https://github.com/intracom-telecom-sdn/nstat-nb-emulator/blob/master/images/nb_flow_gen.png)

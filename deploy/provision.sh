@@ -58,7 +58,7 @@ pip3 $pip_options install --upgrade pip
 mkdir $BASE_DIR/$VENV_DIR_NSTAT
 virtualenv --system-site-packages $BASE_DIR/$VENV_DIR_NSTAT
 
-wget https://raw.githubusercontent.com/intracom-telecom-sdn/nstat-nb-generator/master/deploy/requirements.txt -P $BASE_DIR
+wget https://raw.githubusercontent.com/intracom-telecom-sdn/nstat-nb-emulator/master/deploy/requirements.txt -P $BASE_DIR
 source $BASE_DIR/$VENV_DIR_NSTAT/bin/activate
 pip3 $pip_options install -r $BASE_DIR/requirements.txt
 rm -rf $BASE_DIR/requirements.txt
@@ -66,8 +66,8 @@ deactivate
 
 # NSTAT-NB-GENERATION installation
 #------------------------------------------------------------------------------
-git clone https://github.com/intracom-telecom-sdn/nstat-nb-generator.git $BASE_DIR/nstat-nb-generator
-git --git-dir=nstat-nb-generator/.git --work-tree=nstat-nb-generator checkout v.1.0
+git clone https://github.com/intracom-telecom-sdn/nstat-nb-emulator.git $BASE_DIR/nstat-nb-emulator
+git --git-dir=nstat-nb-emulator/.git --work-tree=nstat-nb-emulator checkout v.1.0
 apt-get clean
 
 # This step is required to run jobs with any user
