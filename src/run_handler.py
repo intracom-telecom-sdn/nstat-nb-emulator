@@ -34,7 +34,7 @@ def northbound_generator():
         nstat orchestrator)
     """
 
-    cmd = ('source /opt/venv_nb_generator/bin/activate; '
+    cmd = ('source /opt/venv_nbemu/bin/activate; '
            'python3.4 {0}nb_gen.py '
            '--controller-ip=\'{1}\' '
            '--controller-port=\'{2}\' '

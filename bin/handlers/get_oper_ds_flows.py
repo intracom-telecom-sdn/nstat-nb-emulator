@@ -18,7 +18,7 @@ def get_oper_flows(self):
     restconf_pass = sys.argv[4]
 
     odl_inventory = \
-        emulators.nb_generator.flow_utils.FlowExplorer(ip,
+        emulators.nbemu.flow_utils.FlowExplorer(ip,
                                                        restconf_port,
                                                        'operational',
                                                        (restconf_user,
