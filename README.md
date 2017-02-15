@@ -1,5 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator/badges/gpa.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator)
-[![Documentation Status](https://readthedocs.org/projects/nstat-northbound-emulator/badge/?version=latest)](http://nstat-northbound-emulator.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/nstat-northbound-generator/badge/?version=latest)](http://nstat-northbound-generator.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.org/intracom-telecom-sdn/nstat-nb-emulator.svg?branch=master)](https://travis-ci.org/intracom-telecom-sdn/nstat-nb-emulator)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg?maxAge=2592000)](https://hub.docker.com/r/intracom/nstat-nb-emulator/)
 [![Issue Count](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator/badges/issue_count.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator)
