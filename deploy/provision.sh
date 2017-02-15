@@ -7,7 +7,7 @@
 # and is available at http://www.eclipse.org/legal/epl-v10.html
 
 BASE_DIR="/opt"
-VENV_DIR_NSTAT="venv_nb_generator"
+VENV_DIR_NSTAT="venv_nbemu"
 
 # PROXY value is passed either from Vagrantfile/Dockerfile
 #------------------------------------------------------------------------------

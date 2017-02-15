@@ -61,7 +61,7 @@ git --git-dir=nstat-nb-emulator/.git --work-tree=nstat-nb-emulator checkout v.1.
 activate the python virtual environment using the command
 
 ```bash
-source /opt/venv_nb_generator/bin/activate
+source /opt/venv_nbemu/bin/activate
 ```
 
 and start testing using the handlers under `<PROJECT_DIR>/src` directory or
@@ -110,9 +110,9 @@ Running this handler from the provided docker container can be done with the
 following two steps
 
 - Activate the python virtual environment, located in the container under the
-  path `/opt/venv_nb_generator` with the following command
+  path `/opt/venv_nbemu` with the following command
 ```bash
-  source /opt/venv_nb_generator/bin/activate
+  source /opt/venv_nbemu/bin/activate
 ```
 - Run the handler using the following command as an example on the same path
   where the handler resides
