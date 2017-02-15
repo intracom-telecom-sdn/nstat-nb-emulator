@@ -5,6 +5,7 @@
 [![Issue Count](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator/badges/issue_count.svg)](https://codeclimate.com/github/intracom-telecom-sdn/nstat-nb-emulator)
 [![Code Health](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-emulator/master/landscape.svg?style=flat)](https://landscape.io/github/intracom-telecom-sdn/nstat-nb-emulator/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b1318125f6e148e4be8deb9d666c185d)](https://www.codacy.com/app/kostis-g-papadopoulos/nstat-nb-emulator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=intracom-telecom-sdn/nstat-nb-emulator&amp;utm_campaign=Badge_Grade)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/353583e2eb4b40828fdb651c1b156456/badge.svg)](https://www.quantifiedcode.com/app/project/353583e2eb4b40828fdb651c1b156456)
 
 # NSTAT Northbound Emulator
 
